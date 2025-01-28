@@ -36,4 +36,14 @@ export class KeycloakService {
       console.log('used needs to authenticate');
     }
   }
+
+  login() {
+    return this.keycloak?.login();
+  }
+
+  logout() {
+    return this.keycloak?.logout({
+      redirectUri: "http://localhost:4200"
+    })
+  }
 }
